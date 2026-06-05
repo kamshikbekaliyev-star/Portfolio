@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+header {
+ backdrop-filter: blur(15px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-list {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  justify-content: center;
+  padding: 15px 50px;
+  backdrop-filter: blur(15p);
+}
+
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  color: #000000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #f1f5f9;
+  color: #3801b8;
+}
+
+.nav-link:active {
+  background-color: #e2e8f0;
+  transform: scale(0.95);
+}
+nav img {
+  width: 50px;
+  height: auto;
+}
+
+
+.projects {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.projects h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 42px;
+    color: #222;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 350px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-content a {
+    display: inline-block;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card-content a:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+footer {
+    background: #1f2937;
+    color: white;
+    margin-top: 50px;
+    animation: fadeUp 1s ease;
+}
+
+.footer-info,
+.footer-contact,
+.footer-logo {
+    transition: all 0.4s ease;
+}
+
+.footer-info p:hover{
+  color:#fbbf24; ;
+  transform: scale(1.15)
+}
+.footer-info p {
+  transition: 0.3s;
+}
+.footer-info{
+  transition: 0.3s;
+
+}
+
+.footer-info:hover{
+  transform: translateY(-8px);
+}
+
+.footer-contact:hover {
+    transform: translateY(-8px);
+}
+
+.footer-logo img {
+    width: 120px;
+    transition: all 0.5s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.15) rotate(10deg);
+}
+.nav-link{
+  color: #00c9a7;
+}
+
+.footer-contact a {
+    color: #60a5fa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #fbbf24;
+    letter-spacing: 1px;
+}
+
+.footer-bottom p {
+    transition: 0.3s;
+}
+
+.footer-bottom p:hover {
+    color: #fbbf24;
+    transform: scale(1.15)
+}
+
+/* Floating animatsiya */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Pastdan chiqib kelish animatsiyasi */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Telefon raqami va telegram yozuvlari ketma-ket chiqishi */
+.footer-contact p {
+    opacity: 0;
+    animation: slideIn 0.8s forwards;
+}
+
+.footer-contact p:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.footer-contact p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
+    overflow-x: hidden;
+    position: relative;
+}
+.bg-circle {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+}
+
+.circle1 {
+    width: 300px;
+    height: 300px;
+    background: #3b82f6;
+    top: 50px;
+    left: 50px;
+    animation: move1 12s infinite alternate;
+}
+
+.circle2 {
+    width: 250px;
+    height: 250px;
+    background: #8b5cf6;
+    right: 100px;
+    top: 150px;
+    animation: move2 10s infinite alternate;
+}
+
+.circle3 {
+    width: 200px;
+    height: 200px;
+    background: #ec4899;
+    bottom: 50px;
+    left: 40%;
+    animation: move3 14s infinite alternate;
+}
+
+@keyframes move1 {
+    from { transform: translate(0,0); }
+    to { transform: translate(100px,80px); }
+}
+
+@keyframes move2 {
+    from { transform: translate(0,0); }
+    to { transform: translate(-120px,100px); }
+}
+
+@keyframes move3 {
+    from { transform: translate(0,0); }
+    to { transform: translate(80px,-100px); }
+}
+.card {
+    width: 350px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.card h2{
+  color: #00c9a7;
+}
+
+
+.card p{
+  color: #FFFFFF;
+}
+.card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(59,130,246,0.4);
+}
+.projects h1 {
+    text-align: center;
+    font-size: 52px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow:
+        0 0 10px #3b82f6,
+        0 0 20px #3b82f6,
+        0 0 40px #3b82f6;
+}
+.card-content a {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(
+        45deg,
+        #3b82f6,
+        #8b5cf6
+    );
+    transition: 0.4s;
+}
+
+.card-content a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #8b5cf6;
+}
+footer {
+    background: rgba(17,24,39,0.7);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+footer {
+    background: rgba(17, 24, 39, 0.65);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 0 20px 0;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    animation: fadeUp 1s ease;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-info h2 {
+    color: #00c9a7;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.footer-info p {
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-contact h3 {
+    color: #00c9a7;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    color: #e2e8f0;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Orqaga tugmasi uchun chiroyli stil */
+.back-btn {
+    display: block;
+    margin: 40px auto 0 auto;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+/* Responsive dizayn (Mobil qurilmalar uchun) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
+}
