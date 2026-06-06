@@ -1,0 +1,214 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.05); 
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-btn:hover {
+    background: #6366f1; 
+    color: #ffffff;
+    transform: scale(1.1); 
+    border-color: #818cf8;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5); 
+}
+
+.back-btn:active {
+    transform: scale(0.95);
+}
+
+.contact-container {
+    background: #1e293b; 
+    width: 100%;
+    max-width: 950px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-info {
+    background: #312e81; 
+    color: #fff;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #f8fafc;
+}
+
+.info-text {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-item i {
+    font-size: 1.4rem;
+    color: #818cf8; 
+    width: 30px;
+    text-align: center;
+}
+
+.detail-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    color: #f1f5f9;
+}
+
+.detail-item p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.contact-form-box {
+    padding: 40px;
+    flex: 1.2;
+    background: #1e293b;
+}
+
+.contact-form-box h2 {
+    color: #f8fafc;
+    margin-bottom: 35px;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px 5px;
+    border: none;
+    border-bottom: 2px solid #475569;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: #f8fafc; 
+    transition: border-color 0.3s;
+    resize: none;
+}
+
+.input-group label {
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    color: #64748b;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -12px;
+    font-size: 0.85rem;
+    color: #818cf8;
+    font-weight: 600;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-bottom-color: #818cf8;
+}
+
+.submit-btn {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.submit-btn:hover {
+    background: #6366f1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 90px; 
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-info, .contact-form-box {
+        padding: 30px;
+    }
+    .back-btn {
+        top: 20px;
+        left: 20px;
+    }
+}

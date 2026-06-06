@@ -21,14 +21,19 @@ html {
   list-style: none;
   justify-content: center;
   padding: 15px 50px;
-  background-color: #00c9a7;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
 }
 
 .nav-link {
   display: inline-block;
   text-decoration: none;
   background-color: transparent;
-  color: #000000;
+  color: #0acc10;
   padding: 12px 24px;
   border-radius: 8px;
   transition: 0.3s;
@@ -96,7 +101,7 @@ h1 span {
   color: #334155;
 }
 
-.hero-left button {
+.hero-left a {
   padding: 12px 24px;
   background-color: #fa7921;
   box-shadow: 0 4px 14px rgba(250, 121, 33, 0.3);
@@ -104,15 +109,16 @@ h1 span {
   border-radius: 8px;
   margin-top: 12px;
   width: fit-content;
+  text-decoration: none;
   border: none;
   font-size: 18px;
   transition: 0.3s;
   cursor: pointer;
 }
-.hero-left button:hover {
+.hero-left a:hover {
   background-color: #f6aa1c;
 }
-.hero-left button:active {
+.hero-left a:active {
   background-color: #bc3908;
   transform: scale(0.95);
 }
@@ -279,6 +285,101 @@ h1 span {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+.family-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #312e81); 
+  text-align: center;
+  width: 100%;
+}
+
+.family-title {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 50px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.family-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; 
+}
+
+.family-card {
+  background: #1e293b;
+  border-radius: 20px;
+  width: 260px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.family-img-box {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #0acc10; 
+  transition: transform 0.4s ease;
+}
+
+.family-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.family-info h3 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.family-info .role {
+  color: #0acc10; 
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.family-info .desc {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.family-card:hover {
+  transform: translateY(-12px); 
+  border-color: #818cf8; 
+  box-shadow: 0 15px 35px rgba(129, 140, 248, 0.25);
+}
+
+.family-card:hover .family-img-box {
+  transform: scale(1.08);
+  border-color: #818cf8;
+}
+
+@media (max-width: 768px) {
+  .family-container {
+    gap: 20px;
+    align-items: stretch;
+  }
+  .family-card {
+    width: 100%; 
+    max-width: 340px;
+  }
 }
 
 
