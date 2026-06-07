@@ -131,6 +131,7 @@ h1 span {
 .hero-right img {
   width: 530px;
   height: 450px;
+  object-fit: contain;
 }
 
 .about {
@@ -369,17 +370,6 @@ h1 span {
 .family-card:hover .family-img-box {
   transform: scale(1.08);
   border-color: #818cf8;
-}
-
-@media (max-width: 768px) {
-  .family-container {
-    gap: 20px;
-    align-items: stretch;
-  }
-  .family-card {
-    width: 100%; 
-    max-width: 340px;
-  }
 }
 
 
